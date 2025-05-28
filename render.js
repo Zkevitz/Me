@@ -8,7 +8,7 @@ window.addEventListener("resize", () => {
 });
 
 const config = {
-    circleCount: 50,
+    circleCount: 75,
     minSize: 20,
     maxSize: 150,
     changeInterval: 3000,
@@ -62,8 +62,16 @@ function initRender() {
         const circles = document.querySelectorAll(".circle");
         circles.forEach(circle => {
             updateCircle(circle);
-        });
+        }); 
     }, config.changeInterval);
+
+    const ProfilDiv = document.createElement("div");
+    if(ProfilDiv){
+        ProfilDiv.classList.add("profil");
+        ProfilDiv.innerHTML = `<h1>Zkevitz</h1>`
+    }
+
+    document.body.appendChild(ProfilDiv);
 }
 
     
