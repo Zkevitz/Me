@@ -9,7 +9,7 @@ window.addEventListener("resize", () => {
 
 const config = {
     circleCount: 75,
-    minSize: 20,
+    minSize: 40,
     maxSize: 150,
     changeInterval: 3000,
     transitionDuration: 500,
@@ -68,10 +68,22 @@ function initRender() {
     const ProfilDiv = document.createElement("div");
     if(ProfilDiv){
         ProfilDiv.classList.add("profil");
+        ProfilDiv.id = "profil";
         ProfilDiv.innerHTML = `<h1>Zkevitz</h1>`
     }
-
-    document.body.appendChild(ProfilDiv);
+    const navBar = document.createElement("div");
+    if(navBar){
+        navBar.classList.add("navbar");
+        navBar.innerHTML = `<ul class = "nav-list">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+        </ul>`;
+    }
+    const main = document.getElementById("main");
+    circlesContainer.appendChild(ProfilDiv);
+    //  ProfilDiv.appendChild(navBar);
+    main.appendChild(navBar);
 }
 
     
