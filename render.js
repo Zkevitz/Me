@@ -1,3 +1,7 @@
+import { ElementCreator } from './CreateElement.js';
+import { currentLanguage } from './CreateElement.js';
+import { switchCurrentLanguage } from './CreateElement.js';
+
 document.addEventListener("DOMContentLoaded", initRender);
 
 window.addEventListener("resize", () => {
@@ -11,7 +15,7 @@ const config = {
     circleCount: 75,
     minSize: 40,
     maxSize: 150,
-    changeInterval: 3000,
+    changeInterval: 8000,
     transitionDuration: 500,
 }
 
@@ -48,9 +52,42 @@ function updateCircle(circle) {
     circle.style.top = `${position.y}px`;
     circle.style.backgroundColor = getRandomColor();
 }
-
+export function expandCircle() {
+    const circles = document.querySelectorAll(".circle");
+    if (circles.length === 0) 
+        return;
+    const randomCircle = circles[Math.floor(Math.random() * circles.length)];
+            randomCircle.style.position = "fixed";
+            randomCircle.style.left = randomCircle.offsetLeft + "px";
+            randomCircle.style.top = randomCircle.offsetTop + "px";
+            randomCircle.style.zIndex = 9999999;
+            randomCircle.classList.add("expand");
+            setTimeout(() => {
+            randomCircle.classList.remove("expand");
+            randomCircle.style.position = "absolute";
+            randomCircle.style.zIndex = 9999;
+    }, 2500);
+}
+export function DisplayMainPage(circlesContainer){
+    let ProfilDiv = document.querySelectorAll(".profil");
+    ProfilDiv.forEach(div => {
+        div.remove();
+    });
+    ProfilDiv = new ElementCreator("div", "profil", "profil", circlesContainer);
+    ProfilDiv.setHTML();
+    ProfilDiv.setBack();
+}  
 function initRender() {
     const circlesContainer = document.getElementById("circles-container");
+    const langButton = document.createElement("button");
+    langButton.id = "langButton";
+    langButton.className = "lang-switch";
+    if (currentLanguage === "en"){
+        langButton.textContent = "🇫🇷";
+    }else{
+        langButton.textContent = "🇬🇧";
+    };
+    circlesContainer.appendChild(langButton);
     
     for (let i = 0; i < config.circleCount; i++){
         const circle = createCircle();
@@ -65,25 +102,20 @@ function initRender() {
         }); 
     }, config.changeInterval);
 
-    const ProfilDiv = document.createElement("div");
-    if(ProfilDiv){
-        ProfilDiv.classList.add("profil");
-        ProfilDiv.id = "profil";
-        ProfilDiv.innerHTML = `<h1>Zkevitz</h1>`
-    }
-    const navBar = document.createElement("div");
-    if(navBar){
-        navBar.classList.add("navbar");
-        navBar.innerHTML = `<ul class = "nav-list">
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/contact">Contact</a></li>
-        </ul>`;
-    }
-    const main = document.getElementById("main");
-    circlesContainer.appendChild(ProfilDiv);
-    //  ProfilDiv.appendChild(navBar);
-    main.appendChild(navBar);
+    
+    DisplayMainPage(circlesContainer);
+
+    langButton.addEventListener("click", () => {
+        if(currentLanguage === "en"){
+            langButton.textContent = "🇬🇧";
+        }else{
+            langButton.textContent = "🇫🇷";
+        }
+        switchCurrentLanguage();
+        const actualDiv = document.querySelector(".profil");
+        actualDiv._creator.setHTML();
+        actualDiv._creator.setBack();
+    });
 }
 
-    
+
