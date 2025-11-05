@@ -3,17 +3,17 @@ import { expandCircle, DisplayMainPage } from "./render.js";
 export let currentLanguage = "fr";
 
 const projects42 = [
-    { name: "WebServ", url: "https://github.com/Zkevitz/WebServ" },
-    { name: "MiniShell", url: "https://github.com/Zkevitz/minishell" },
-    { name: "CPP", url: "https://github.com/Zkevitz/CPP" },
-    { name: "CUB3D", url: "https://github.com/Zkevitz/CUB3D" },
-    { name: "So_long", url: "https://github.com/Zkevitz/So_long"},
-    { name: "ft_transcendence", url: "https://github.com/phlpn/Transcendence"},
-    // ajoute autant de projets que tu veux
+    { name: "WebServ", url: "https://github.com/Zkevitz/WebServ", language: "C++" },
+    { name: "MiniShell", url: "https://github.com/Zkevitz/minishell", language: "C" },
+    { name: "CPP", url: "https://github.com/Zkevitz/CPP", language: "C++" },
+    { name: "CUB3D", url: "https://github.com/Zkevitz/CUB3D", language: "C" },
+    { name: "So_long", url: "https://github.com/Zkevitz/So_long", language: "C" },
+    { name: "ft_transcendence", url: "https://github.com/phlpn/Transcendence", language: "JavaScript/TypeScript" },
 ];
 const projectsPersonnal = [
-    { name: "Wakfu Damage Meter", url: "https://github.com/Zkevitz/Wakfu-Damage-Meter" },
-    // ajoute autant de projets que tu veux
+    { name: "Wakfu Damage Meter", url: "https://github.com/Zkevitz/Detail-s-Wakfu-Damage-Meter", language: "Python" },
+    { name: "VintedScrapper", url: "https://github.com/Zkevitz/VintedScrapper", language: "Python" },
+    { name: "DiscordBot", url: "https://github.com/Zkevitz/ChallFail_discord_bot", language: "Python" },
 ];
 
 const TextPersonnalProjects = {
@@ -65,7 +65,7 @@ const GeneralText = {
         clickAction : "Click on the project name to go to the github repository",
     },
     fr : {
-        clickAction : "Click on the project name to go to the github repository",
+        clickAction : "Cliquez sur le nom du projet pour accéder au dépôt GitHub.",
     }
 }
 const birthYear = 2001;
@@ -115,7 +115,7 @@ export class ElementCreator {
                 <button id="AboutMe" class="single-button">About Me</button>
                 <button id="42" class="single-button">42 Cursus</button>
                 <button id="PersonnalProjects" class="single-button">Personnal Projects</button>
-                <button id="github" class="single-button">GitHub</button>
+                <a href="https://github.com/Zkevitz" target="_blank" id="github" class="single-button">GitHub</a>
                 </div>`;
                 break;
             case "42Div":
@@ -138,14 +138,35 @@ export class ElementCreator {
                 <div class="projects-container align-center"></div>`;
 
                 const projectsContainer = this.element.querySelector(".projects-container");
-                projects42.forEach(project => {
-                    const btn = document.createElement("a");
-                    btn.href = project.url;
-                    btn.target = "_blank";
-                    btn.className = "portfolio-button";
-                    btn.textContent = project.name;
-                    projectsContainer.appendChild(btn);
-                });
+
+                const grouped = projects42.reduce((acc, project) => {
+                    if (!acc[project.language]) acc[project.language] = [];
+                    acc[project.language].push(project);
+                    return acc;
+                }, {});
+                for (const [language, projects] of Object.entries(grouped)) {
+                    const section = document.createElement("section");
+                    section.className = "project-category";
+
+                    const title = document.createElement("h2");
+                    title.textContent = language;
+                    section.appendChild(title);
+
+                    const grid = document.createElement("div");
+                    grid.className = "project-grid";
+
+                    projects.forEach(project => {
+                        const btn = document.createElement("a");
+                        btn.href = project.url;
+                        btn.target = "_blank";
+                        btn.className = "portfolio-button";
+                        btn.textContent = project.name;
+                        grid.appendChild(btn);
+                    });
+
+                    section.appendChild(grid);
+                    projectsContainer.appendChild(section);
+                }
                 break;
             case "PersonnalProjects":
                 const text2 = TextPersonnalProjects[currentLanguage];
@@ -164,14 +185,35 @@ export class ElementCreator {
                 <div class="projects-container align-center"></div>`;
 
                 const projectsContainer2 = this.element.querySelector(".projects-container");
-                projectsPersonnal.forEach(project => {
-                    const btn = document.createElement("a");
-                    btn.href = project.url;
-                    btn.target = "_blank";
-                    btn.className = "portfolio-button";
-                    btn.textContent = project.name;
-                    projectsContainer2.appendChild(btn);
-                });
+                const groupedPersonnal = projectsPersonnal.reduce((acc, project) => {
+                    if (!acc[project.language]) acc[project.language] = [];
+                    acc[project.language].push(project);
+                    return acc;
+                }, {});
+
+                for (const [language, projects] of Object.entries(groupedPersonnal)) {
+                    const section = document.createElement("section");
+                    section.className = "project-category";
+
+                    const title = document.createElement("h2");
+                    title.textContent = language;
+                    section.appendChild(title);
+
+                    const grid = document.createElement("div");
+                    grid.className = "project-grid";
+
+                    projects.forEach(project => {
+                        const btn = document.createElement("a");
+                        btn.href = project.url;
+                        btn.target = "_blank";
+                        btn.className = "portfolio-button";
+                        btn.textContent = project.name;
+                        grid.appendChild(btn);
+                    });
+
+                    section.appendChild(grid);
+                    projectsContainer2.appendChild(section);
+                }
                 break;
             case "AboutMe":
                 const aboutMeText = AboutMeText[currentLanguage];
@@ -222,7 +264,7 @@ export class ElementCreator {
                                 div42.setHTML();
                                 div42.setBack();
                             }
-                        }, 2500);
+                        }, 2000);
                     });
                 }
                 const buttonPersonnalProjects = document.getElementById("PersonnalProjects");
@@ -238,7 +280,7 @@ export class ElementCreator {
                                 divPersonnalProjects.setHTML();
                                 divPersonnalProjects.setBack();
                             }
-                        }, 2500);
+                        }, 2000);
                     });
                 }
                 const buttonAboutMe = document.getElementById("AboutMe");
@@ -254,7 +296,7 @@ export class ElementCreator {
                                 divAboutMe.setHTML();
                                 divAboutMe.setBack();
                             }
-                        }, 2500);
+                        }, 2000);
                     });
                 }
                 break;
@@ -265,7 +307,7 @@ export class ElementCreator {
                     setTimeout(() => {
                         this.element.remove();
                         DisplayMainPage(this.element.parent);
-                    }, 2500);
+                    }, 2000);
                 });
                 break;
             default:
@@ -275,7 +317,7 @@ export class ElementCreator {
                     setTimeout(() => {
                         this.element.remove();
                         DisplayMainPage(this.element.parent);
-                    }, 2500);
+                    }, 2000);
                 });
                 break;
         }

@@ -66,7 +66,7 @@ export function expandCircle() {
             randomCircle.classList.remove("expand");
             randomCircle.style.position = "absolute";
             randomCircle.style.zIndex = 9999;
-    }, 2500);
+    }, 2000);
 }
 export function DisplayMainPage(circlesContainer){
     let ProfilDiv = document.querySelectorAll(".profil");
