@@ -121,7 +121,7 @@ export class ElementCreator {
             case "42Div":
                 const text1 = Text42Cursus[currentLanguage];
                 this.element.innerHTML = `<h1>42 Cursus</h1>
-                <button id="back" class="single-button">Back</button>
+                <button id="back" class="single-button single-button--top-right">Back</button>
                 <div class="description">
                     <div class="JoliP">
                         <p class="align-center">
@@ -171,7 +171,7 @@ export class ElementCreator {
             case "PersonnalProjects":
                 const text2 = TextPersonnalProjects[currentLanguage];
                 this.element.innerHTML = `<h1>Personnal Projects</h1>
-                <button id="back" class="single-button">Back</button>
+                <button id="back" class="single-button single-button--top-right">Back</button>
                 <div class="description">
                 <div class="JoliP">
                     <p class="align-center">
@@ -218,7 +218,7 @@ export class ElementCreator {
             case "AboutMe":
                 const aboutMeText = AboutMeText[currentLanguage];
                 this.element.innerHTML = `<h1>About Me</h1>
-                <button id="back" class="single-button">Back</button>
+                <button id="back" class="single-button single-button--top-right">Back</button>
                 <div class="description">
                     <p class="align-center">
                         Name : Matteo Gigot
@@ -264,7 +264,7 @@ export class ElementCreator {
                                 div42.setHTML();
                                 div42.setBack();
                             }
-                        }, 2000);
+                        }, 1000);
                     });
                 }
                 const buttonPersonnalProjects = document.getElementById("PersonnalProjects");
@@ -280,7 +280,7 @@ export class ElementCreator {
                                 divPersonnalProjects.setHTML();
                                 divPersonnalProjects.setBack();
                             }
-                        }, 2000);
+                        }, 1000);
                     });
                 }
                 const buttonAboutMe = document.getElementById("AboutMe");
@@ -296,7 +296,7 @@ export class ElementCreator {
                                 divAboutMe.setHTML();
                                 divAboutMe.setBack();
                             }
-                        }, 2000);
+                        }, 1000);
                     });
                 }
                 break;
@@ -307,7 +307,7 @@ export class ElementCreator {
                     setTimeout(() => {
                         this.element.remove();
                         DisplayMainPage(this.element.parent);
-                    }, 2000);
+                    }, 1000);
                 });
                 break;
             default:
@@ -317,7 +317,7 @@ export class ElementCreator {
                     setTimeout(() => {
                         this.element.remove();
                         DisplayMainPage(this.element.parent);
-                    }, 2000);
+                    }, 1000);
                 });
                 break;
         }
