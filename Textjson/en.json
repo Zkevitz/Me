@@ -1,0 +1,21 @@
+{
+"TextPersonnalProjects" : {
+        "title" : "Personnal <span>projects</span>.",
+        "MainText" : "Here is a short list of my personnal projects"
+    },
+
+"WelcomeText" : {
+        "title" : "Zkevitz (Matteo Gigot)",
+        "MainText" : "Welcome to my portfolio, here you will find a collection of my projects and experiences."
+    },
+"Text42Cursus" : {
+        "title" : "42 Cursus",
+        "MainText" : "My journey at 42 allowed me to dive deep into computer science through a hands-on, peer-learning approach. From low-level programming in C to full-stack projects, each challenge helped me grow as a developer and problem solver.",
+        "secondText" : "Here is a short list of my projects that i've done during my 42 cursus"
+    },
+"AboutMeText" : {
+        "title" : "About Me",
+        "introduction" : "Hello, I'm ",
+        "MainText" : "Since I was young, I have always been fascinated by technology and programming. In April 2023, I started my curriculum at 42 and discovered the world of coding. Since then, I haven’t stopped programming, whether for personal projects or as part of my studies. I will complete the common core at 42 in July 2025. You can find all my projects and the details of my journey on this website.",
+    }
+}

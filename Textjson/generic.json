@@ -1,0 +1,21 @@
+{
+    "projects42" : [
+    { "name": "WebServ", "url": "https://github.com/Zkevitz/WebServ", "language": "C++", "thumbnail": { "symbol": "🌐", "color": "cyan"}, "description" : "Designing an HTTP web server (requests and socket management)"},
+    { "name": "MiniShell", "url": "https://github.com/Zkevitz/minishell", "language": "C", "thumbnail": { "symbol": "⚙️", "color": "grey"}, "description" : "Designing a shell (command line interface)" },
+    { "name": "CPP", "url": "https://github.com/Zkevitz/CPP", "language": "C++", "thumbnail": { "symbol": "⚙️", "color": "red"}, "description" : "C++ educationnal project"},
+    { "name": "CUB3D", "url": "https://github.com/Zkevitz/CUB3D", "language": "C", "thumbnail": { "symbol": "🎮", "color": "purple"}, "description" : "A first-person 3D game project, using raycasting techniques."},
+    { "name": "So_long", "url": "https://github.com/Zkevitz/So_long", "language": "C", "thumbnail": { "symbol": "🎮", "color": "purple"}, "description" : "A simple 2D game using one OpenGL library" },
+    { "name": "ft_transcendence", "url": "https://github.com/phlpn/Transcendence", "language": "JavaScript/TypeScript", "thumbnail": { "symbol": "🌐", "color": "cyan"}, "description" : "Full stack web app in team" }
+],
+"projectsPersonnal" : [
+    { "name": "Wakfu Damage Meter", "url": "https://github.com/Zkevitz/Detail-s-Wakfu-Damage-Meter", "language": "Python", "thumbnail": { "symbol": "⚙️", "color": "red"}, "description" : "Wakfu Damage Meter" },
+    { "name": "VintedScrapper", "url": "https://github.com/Zkevitz/VintedScrapper", "language": "Python", "thumbnail": { "symbol": "🤖", "color": "grey"}, "description" : "VintedScrapper" },
+    { "name": "DiscordBot", "url": "https://github.com/Zkevitz/ChallFail_discord_bot", "language": "Python", "thumbnail": { "symbol": "🤖", "color": "grey"}, "description" : "DiscordBot" }
+],
+
+"GeneralText" : {
+        "clickAction" : "Click on the project name to go to the github repository",
+        "searchPlaceholder" : "Search or navigate...",
+        "contactTitle" : "Contact <span>Me</span>"
+    }
+}

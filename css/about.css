@@ -1,0 +1,156 @@
+ /* ── PAGE: ABOUT ── */
+.about-page {
+    padding: 60px 80px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.page-header {
+    margin-bottom: 48px;
+}
+
+.page-tag {
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+    margin-bottom: 12px;
+}
+
+.page-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 48px;
+    font-weight: 800;
+    color: var(--text);
+    line-height: 1.1;
+    letter-spacing: -2px;
+}
+
+.page-title span { color: var(--accent); }
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 40px;
+}
+
+.about-bio {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-dim);
+    grid-column: 1 / -1;
+}
+
+.about-bio strong { color: var(--text); }
+
+.stat-card {
+    background: var(--chrome-mid);
+    border: 1px solid var(--chrome-border);
+    border-radius: 12px;
+    padding: 24px;
+    transition: border-color 0.2s;
+}
+.stat-card:hover { border-color: var(--accent); }
+
+.stat-number {
+    font-family: 'Syne', sans-serif;
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 8px;
+}
+.stat-label {
+    font-size: 11px;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.skills-section { margin-top: 40px; }
+.skills-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 16px;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tag {
+    padding: 6px 14px;
+    background: var(--chrome-mid);
+    border: 1px solid var(--chrome-border);
+    border-radius: 50px;
+    font-size: 12px;
+    color: var(--text-dim);
+    transition: all 0.15s;
+    cursor: default;
+}
+.skill-tag:hover {
+    border-color: var(--accent2);
+    color: var(--accent2);
+    background: rgba(137,220,235,0.05);
+}
+
+ /* ── PAGE: EXPERIENCE ── */
+ /* ── PAGE: EXPERIENCE ── */
+.exp-page {
+    padding: 60px 80px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.timeline { margin-top: 40px; position: relative; }
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0; bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, var(--accent), transparent);
+}
+
+.timeline-item {
+    padding-left: 56px;
+    margin-bottom: 40px;
+    position: relative;
+}
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 14px;
+    top: 6px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 12px rgba(203,166,247,0.5);
+}
+
+.timeline-date {
+    font-size: 11px;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 6px;
+}
+.timeline-role {
+    font-family: 'Syne', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 4px;
+}
+.timeline-company { font-size: 12px; color: var(--text-dim); margin-bottom: 12px; }
+.timeline-desc { font-size: 13px; color: var(--text-dim); line-height: 1.7; }

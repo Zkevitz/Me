@@ -1,0 +1,88 @@
+ /* ── PAGE: CONTACT ── */
+.contact-page {
+    padding: 60px 80px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 40px;
+}
+
+.contact-form { display: flex; flex-direction: column; gap: 16px; }
+
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+.form-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-dim);
+}
+.form-input, .form-textarea {
+    background: var(--chrome-mid);
+    border: 1px solid var(--chrome-border);
+    border-radius: 8px;
+    padding: 12px 14px;
+    color: var(--text);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    outline: none;
+    transition: border-color 0.2s;
+    resize: none;
+}
+.form-input:focus, .form-textarea:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px rgba(203,166,247,0.1);
+}
+.form-textarea { height: 120px; }
+
+.submit-btn {
+    padding: 12px 24px;
+    background: linear-gradient(135deg, var(--accent), #b4befe);
+    border: none;
+    border-radius: 8px;
+    color: #11111b;
+    font-family: 'Syne', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(203,166,247,0.3);
+}
+
+.contact-links { display: flex; flex-direction: column; gap: 16px; padding-top: 8px; }
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    background: var(--chrome-mid);
+    border: 1px solid var(--chrome-border);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+}
+  .contact-link:hover {
+    border-color: var(--accent2);
+    transform: translateX(4px);
+}
+  .contact-link-icon { font-size: 20px; }
+  .contact-link-info { flex: 1; }
+  .contact-link-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 2px;
+}
+.contact-link-value { font-size: 11px; color: var(--text-dim); }
+
