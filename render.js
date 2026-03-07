@@ -203,7 +203,7 @@ async function init_html() {
               <span class="contact-link-icon">✉️</span>
               <div class="contact-link-info">
                 <div class="contact-link-name">Email</div>
-                <div class="contact-link-value">contact@portfolio.dev</div>
+                <div class="contact-link-value">matteo.gigot2001@gmail.com</div>
               </div>
             </a>
           </div>
