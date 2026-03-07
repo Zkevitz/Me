@@ -4,7 +4,7 @@
     { "name": "MiniShell", "url": "https://github.com/Zkevitz/minishell", "language": "C", "thumbnail": { "symbol": "⚙️", "color": "grey"}, "description" : "Designing a shell (command line interface)" },
     { "name": "CPP", "url": "https://github.com/Zkevitz/CPP", "language": "C++", "thumbnail": { "symbol": "⚙️", "color": "red"}, "description" : "C++ educationnal project"},
     { "name": "CUB3D", "url": "https://github.com/Zkevitz/CUB3D", "language": "C", "thumbnail": { "symbol": "🎮", "color": "purple"}, "description" : "A first-person 3D game project, using raycasting techniques."},
-    { "name": "So_long", "url": "https://github.com/Zkevitz/So_long", "language": "C", "thumbnail": { "symbol": "🎮", "color": "purple"}, "description" : "A simple 2D game using one OpenGL library" },
+    { "name": "So_long", "url": "https://github.com/Zkevitz/So_long", "language": "C", "thumbnail": { "symbol": "🎮", "color": "purple"}, "description" : "A simple 2D game using an OpenGL library" },
     { "name": "ft_transcendence", "url": "https://github.com/phlpn/Transcendence", "language": "JavaScript/TypeScript", "thumbnail": { "symbol": "🌐", "color": "cyan"}, "description" : "Full stack web app in team" }
 ],
 "projectsPersonnal" : [

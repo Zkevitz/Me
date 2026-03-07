@@ -11,7 +11,6 @@ const current_language = "Fr";
 let TEXTS = null;
 document.addEventListener("DOMContentLoaded", async() => {
     await loadText();
-    console.log(TEXTS);
     await init_html();
     await setup_listeners();
     renderTabs();

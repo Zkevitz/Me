@@ -10,14 +10,14 @@
 },
 "Text42Cursus" : {
     "title" : "42 Cursus",
-    "MainText" : "Mon parcours à <strong>42</strong> m’a permis d’explorer en profondeur l’informatique grâce à une approche pratique et basée sur l’entraide entre étudiants. Des projets en <strong>C</strong> bas niveau jusqu’au développement <strong>full-stack</strong>, chaque défi m’a aidé à progresser en tant que développeur et à renforcer mes capacités de résolution de problèmes.",
-    "secondText" : "Voici une courte liste des projets que j’ai réalisés au cours de mon cursus à <strong>42</strong>."
+    "MainText" : "Mon parcours à <strong><a href='https://42belgium.be/fr'>42</a></strong> m’a permis d’explorer en profondeur l’informatique grâce à une approche pratique et basée sur l’entraide entre étudiants. Des projets en <strong>C</strong> bas niveau jusqu’au développement <strong>full-stack</strong>, chaque défi m’a aidé à progresser en tant que développeur et à renforcer mes capacités de résolution de problèmes.",
+    "secondText" : "Voici une courte liste des projets que j’ai réalisés au cours de mon cursus à <strong><a href='https://42belgium.be/fr'>42</a></strong>."
 },
 
 "AboutMeText" : {
         "title" : "A propos de moi",
         "introduction" : "Bonjour je suis ",
-        "MainText" : "Depuis mon plus jeune âge, j’ai toujours été fasciné par <strong>la technologie et la programmation</strong>. C’est en avril 2023 que j’ai commencé mon cursus à <strong>42</strong> et découvert le monde du <strong>code</strong>. Depuis, je n’ai jamais arrêté de programmer, que ce soit pour mes projets personnels ou dans le cadre de mes études. J'ai termine mon tronc commun à <strong>42</strong> en juillet 2025. Vous pouvez retrouver sur ce site l’ensemble de mes projets et le détail de mon parcours."
+        "MainText" : "Depuis mon plus jeune âge, j’ai toujours été fasciné par <strong>la technologie et la programmation</strong>. C’est en avril 2023 que j’ai commencé mon cursus à <strong><a href='https://42belgium.be/fr'>42</a></strong> et découvert le monde du <strong>code</strong>. Depuis, je n’ai jamais arrêté de programmer, que ce soit pour mes projets personnels ou dans le cadre de mes études. J'ai termine mon tronc commun à <strong><a href='https://42belgium.be/fr'>42</a></strong> en juillet 2025. Vous pouvez retrouver sur ce site l’ensemble de mes projets et le détail de mon parcours."
     }
 }
 
