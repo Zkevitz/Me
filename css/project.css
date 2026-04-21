@@ -26,6 +26,10 @@
     box-shadow: 0 16px 40px rgba(0,0,0,0.5);
 }
 
+.project-card-link {
+  text-decoration: none;
+  color: inherit;
+}
 .project-thumb {
     height: 120px;
     display: flex;

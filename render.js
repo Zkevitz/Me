@@ -1,10 +1,11 @@
 const TABS_CONFIG = {
-  home:       { title: 'New tab',   icon: '🏠', url: '/home',        domain: 'portfolio.dev' },
+  home:       { title: 'Home',   icon: '🏠', url: '/home',        domain: 'portfolio.dev' },
   about:      { title: 'About',         icon: '👤', url: '/about',       domain: 'portfolio.dev' },
   projects:   { title: 'Projects',          icon: '🚀', url: '/projects',    domain: 'portfolio.dev' },
   experience: { title: 'Experience',       icon: '💼', url: '/experience',  domain: 'portfolio.dev' },
   contact:    { title: 'Contact',          icon: '✉️', url: '/contact',     domain: 'portfolio.dev' },
   studies:    { title: 'Studies',           icon: '🎓', url: '/studies',     domain: 'portfolio.dev' },
+  certs:      { title: 'Certifications',    icon: '🏆', url: '/certs',       domain: 'portfolio.dev' },
 };
 
 const current_language = "Fr";
@@ -199,7 +200,7 @@ async function init_html() {
                 <div class="contact-link-value">https://github.com/Zkevitz</div>
               </div>
             </a>
-            <a class="contact-link" href="mailto:contact@portfolio.dev">
+            <a class="contact-link" href="mailto:matteo.gigot2001@gmail.com">
               <span class="contact-link-icon">✉️</span>
               <div class="contact-link-info">
                 <div class="contact-link-name">Email</div>
@@ -227,16 +228,15 @@ async function init_html() {
 function renderProjectsCards(personnal = false) {
     let projects = personnal ? TEXTS.projectsPersonnal : TEXTS.projects42;
     return projects.map(project => `
+      <a href="${project.url}" target="_blank" class="project-card-link">
         <div class="project-card">
             <div class="project-thumb thumb-${project.thumbnail.color}">
                 ${project.thumbnail.symbol}
             </div>
             <div class="project-info">
                 <div class="project-name">
-                    <a href="${project.url}" target="_blank">
                         ${project.name}
-                    </a>
-                </div>
+                        </div>
                 <div class="project-desc">
                     ${project.description}
                 </div>
@@ -247,6 +247,7 @@ function renderProjectsCards(personnal = false) {
                 </div>
             </div>
         </div>
+      </a>
     `).join('');
 }
 async function loadText() {
@@ -279,6 +280,15 @@ function renderTabs() {
     el.querySelector('.tab-close').addEventListener('click', (e) => {
       e.stopPropagation();
       closeTab(tab.id);
+    });
+    //still in work middle click to close tabs
+    el.addEventListener('auxclick', (e) => {
+      console.log("voici mon e")
+      console.log(e);
+      if (e.button === 1) {
+        e.stopPropagation();
+        closeTab(tab.id);
+      }
     });
     bar.insertBefore(el, newBtn);
   });
