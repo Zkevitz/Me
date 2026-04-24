@@ -1,23 +1,23 @@
 {
-"TextPersonnalProjects" : {
-        "title" : "Mes <span>projets.</span>",
-        "MainText" : "Vous voici désormais du côté de mes projets personnels, au fil du temps je me suis beaucoup penché sur l'apprentissage du language Python et la creation de tâches automatisées. vous y retrouverez un scrapperWeb, un bot de gestion discord et un calculateur basé sur la lecture de fichiers log.",
-        "secondText" : ""
-},
-"WelcomeText" : {
-    "title" : "Zkevitz (Matteo Gigot)",
-    "MainText" : "Bonjour, voici mon portfolio sous forme de site web interactif dans lequel vous pourrez découvrir mon parcours et mes projets."
-},
-"Text42Cursus" : {
-    "title" : "42 Cursus",
-    "MainText" : "Mon parcours à l'école <strong><a href='https://42belgium.be/fr'>42</a></strong> m’a permis d’explorer l’informatique en profondeur grâce à une approche pratique et basée sur la coopération entre étudiants. Des projets en <strong>C</strong> bas niveau jusqu’au développement <strong>full-stack</strong>, Chaque défi m’a aidé à progresser en tant que développeur et à renforcer mes capacités de résolution de problèmes.",
-    "secondText" : "Voici une courte liste des projets que j’ai réalisés au cours de mon cursus à <strong><a href='https://42belgium.be/fr'>42</a></strong>."
-},
+    "TextPersonnalProjects" : {
+            "title" : "Mes <span>projets.</span>",
+            "MainText" : "Vous voici désormais du côté de mes projets personnels, au fil du temps je me suis beaucoup penché sur l'apprentissage du language Python et la creation de tâches automatisées. vous y retrouverez un scrapperWeb, un bot de gestion discord et un calculateur basé sur la lecture de fichiers log.",
+            "secondText" : ""
+    },
+    "WelcomeText" : {
+        "title" : "Zkevitz (Matteo Gigot)",
+        "MainText" : "Bonjour, voici mon portfolio sous forme de site web interactif dans lequel vous pourrez découvrir mon parcours et mes projets."
+    },
+    "Text42Cursus" : {
+        "title" : "42 Cursus",
+        "MainText" : "Mon parcours à l'école <strong><a href='https://42belgium.be/fr'>42</a></strong> m’a permis d’explorer l’informatique en profondeur grâce à une approche pratique et basée sur la coopération entre étudiants. Des projets en <strong>C</strong> bas niveau jusqu’au développement <strong>full-stack</strong>, Chaque défi m’a aidé à progresser en tant que développeur et à renforcer mes capacités de résolution de problèmes. C'est grace au partenariant entre Deloitte (partenaire de 42) et Amazone Web Service(AWS) que je peux participé gratuitement au examen de certifications AWS",
+        "secondText" : "Voici une courte liste des projets que j’ai réalisés au cours de mon cursus à <strong><a href='https://42belgium.be/fr'>42</a></strong>."
+    },
 
-"AboutMeText" : {
-        "title" : "A propos de moi",
-        "introduction" : "Bonjour je suis ",
-        "MainText" : "Depuis mon plus jeune âge, j’ai toujours été fasciné par <strong>la technologie et la programmation</strong>. C’est en avril 2023 que j’ai commencé mon cursus à l'école <strong><a href='https://42belgium.be/fr'>42</a></strong> et découvert le monde du <strong>code</strong>. Depuis, je n’ai jamais arrêté de programmer, que ce soit pour mes projets personnels ou dans le cadre de mes études. J'ai terminé mon tronc commun à <strong><a href='https://42belgium.be/fr'>42</a></strong> en juillet 2025. Depuis j'entreprend la réalisation d'un RNCP6 : Concepteur développeur de solutions informatiques (Option developpement applicatif), lien vers les détails : <a href=\"https://www.francecompetences.fr/recherche/rncp/39783\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>, en parallèle je prend le temps d'effectuer certaines certifications AWS Cloud, le cloud étant aujourd'hui une technologie omniprésente dans le milieu de l'informatique, Vous trouverez également sur ce site l’ensemble de mes projets et plus de détails sur mon parcours."
-    }
+    "AboutMeText" : {
+            "title" : "A propos de moi",
+            "introduction" : "Bonjour je suis ",
+            "MainText" : "Depuis mon plus jeune âge, j’ai toujours été fasciné par <strong>la technologie et la programmation</strong>. C’est en avril 2023 que j’ai commencé mon cursus à l'école <strong><a href='https://42belgium.be/fr'>42</a></strong> et découvert le monde du <strong>code</strong>. Depuis, je n’ai jamais arrêté de programmer, que ce soit pour mes projets personnels ou dans le cadre de mes études. J'ai terminé mon tronc commun à <strong><a href='https://42belgium.be/fr'>42</a></strong> en juillet 2025. Depuis j'entreprend la réalisation d'un RNCP6 : Concepteur développeur de solutions informatiques (Option developpement applicatif), lien vers les détails : <a href=\"https://www.francecompetences.fr/recherche/rncp/39783\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>, en parallèle je prend le temps d'effectuer certaines certifications AWS Cloud, le cloud étant aujourd'hui une technologie omniprésente dans le milieu de l'informatique, Vous trouverez également sur ce site l’ensemble de mes projets et plus de détails sur mon parcours."
+        }
 }
 
